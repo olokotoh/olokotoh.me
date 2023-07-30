@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: olokotoh
+  labels:
+    app: olokotoh
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: olokotoh
+  template:
+    metadata:
+      labels:
+        app: olokotoh
+    spec:
+      containers:
+        - name: olokotoh
+          image: 628529596416.dkr.ecr.us-east-1.amazonaws.com/olokotoh:1.1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
