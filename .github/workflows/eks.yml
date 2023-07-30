@@ -34,11 +34,10 @@ jobs:
       env:
         ECR_REGISTRY: 628529596416.dkr.ecr.us-east-1.amazonaws.com/olokotoh
         ECR_REPOSITORY: olokotoh
-        IMAGE_TAG: latest
       run: |
-        docker build -t olokotoh:v2.0 .
+        docker build -t olokotoh:latest .
         
-        docker tag olokotoh:v2.0 628529596416.dkr.ecr.us-east-1.amazonaws.com/olokotoh
+        docker tag olokotoh:latest 628529596416.dkr.ecr.us-east-1.amazonaws.com/olokotoh
         docker push 628529596416.dkr.ecr.us-east-1.amazonaws.com/olokotoh
     - name: Update kube config
       run: aws eks update-kubeconfig --name aslim
