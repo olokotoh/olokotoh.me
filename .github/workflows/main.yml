@@ -36,11 +36,11 @@ jobs:
       - name: Build, tag, and push image to Amazon ECR
         id: build-image
         env:
-          ECR_REGISTRY: public.ecr.aws/n9u3a7e4/olokotoh
-          ECR_REPOSITORY: olokotoh
+          ECR_REGISTRY: public.ecr.aws/n9u3a7e4/aslim
+          ECR_REPOSITORY: aslim
           IMAGE_TAG: latest
         run: |
-          docker build -t olokotoh:latest .
+          docker build -t aslim:latest .
           
-          docker tag olokotoh:latest public.ecr.aws/n9u3a7e4/olokotoh
-          docker push public.ecr.aws/n9u3a7e4/olokotoh
+          docker tag aslim:latest public.ecr.aws/n9u3a7e4/aslim
+          docker push public.ecr.aws/n9u3a7e4/aslim
