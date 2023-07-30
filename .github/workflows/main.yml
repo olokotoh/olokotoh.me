@@ -40,7 +40,7 @@ jobs:
           ECR_REPOSITORY: olokotoh
           IMAGE_TAG: latest
         run: |
-          docker build -t olokotoh:latest .
+          docker build -t olokotoh:v2.0 .
           
           docker tag 628529596416.dkr.ecr.us-east-1.amazonaws.com/olokotoh
           docker push 628529596416.dkr.ecr.us-east-1.amazonaws.com/olokotoh
