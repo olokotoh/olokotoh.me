@@ -38,6 +38,5 @@ jobs:
         id: build-image
         run: |
           docker build -t olokotoh:latest .
-          docker-compose up -d
           docker tag olokotoh:latest 628529596416.dkr.ecr.us-east-1.amazonaws.com/olokotoh
           docker push 628529596416.dkr.ecr.us-east-1.amazonaws.com/olokotoh
