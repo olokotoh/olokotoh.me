@@ -1,10 +1,21 @@
+# steps:
+# - name: 'gcr.io/cloud-builders/docker'
+#   args: ['build', '-t', 'gcr.io/metal-map-246806/olokotoh', '.']
+# images: ['gcr.io/metal-map-246806/olokotoh']
+
+
+# options:
+#   logging: {'cloudBuilders': {'streaming': 'true'}}
+
+# logsBucket: 'cloud-build-log'
+
 steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/metal-map-246806/olokotoh', '.']
 images: ['gcr.io/metal-map-246806/olokotoh']
 
-
 options:
   logging: {'cloudBuilders': {'streaming': 'true'}}
 
 logsBucket: 'cloud-build-log'
+
